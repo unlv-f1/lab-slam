@@ -133,6 +133,8 @@ Then, add a **TF** visualization and enable **Show Names** and set **Marker Scal
 
 ![Screenshot of both visualizations](img/image-1.png)
 
+In Global Options, set the **Fixed Frame** parameter to `map`. 
+
 In terminal 2, launch the stack:
 
 ```
@@ -147,6 +149,8 @@ In terminal 3, go inside `~/ws/maps` and launch `slam_toolbox` using the custom 
 cd ~/ws/maps
 ros2 launch slam_toolbox online_async_launch.py params_file:=${HOME}/ws/src/f1tenth_unlv_veh/config/f1tenth_online_async.yaml
 ```
+
+Uncheck and check your map visualization to reset it. (Sometimes, the map doesn't show up.)
 
 On success, you will see the map starting to be made in RViz:
 
