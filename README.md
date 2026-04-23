@@ -99,7 +99,7 @@ Once you are finished, enter in a good name for the map (e.g. `my-map`) next to 
 Now, since we've launched `slam_toolbox` in `/sim_ws`, the map will be saved in that directory. Navigate to that directory to see that it's there:
 
 ```
-cd ~/ws/maps
+cd /sim_ws
 ls
 ```
 
@@ -146,6 +146,7 @@ Wait for the stack to fully start up, and ensure that you can use the controller
 In terminal 3, go inside `~/ws/maps` and launch `slam_toolbox` using the custom parameter file found in `f1tenth_unlv_veh`:
 
 ```
+mkdir -p ~/ws/maps
 cd ~/ws/maps
 ros2 launch slam_toolbox online_async_launch.py params_file:=${HOME}/ws/src/f1tenth_unlv_veh/config/f1tenth_online_async.yaml
 ```
